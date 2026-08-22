@@ -4,6 +4,9 @@
 # 3: api-endpint (Wahl zwichen 'cards'|'cards_small'|'cards_cropped')
 
 import argparse
+import json
+from ygo_card_downloader.config import Config
+from ygo_card_downloader.api_client import ApiClient
 from ygo_card_downloader.validator import validate_input, validate_output
 
 
@@ -25,7 +28,21 @@ def main():
     input_file = validate_input(args.ids)
     output_folder = validate_output(args.destination)
 
-    print(input_file, output_folder, args.api_endpoint)
+    config = Config()
+    api_client = ApiClient(config=config)
+
+    cards = []
+    with open(input_file, "r", encoding="utf-8") as file:
+        cards = json.load(file)
+
+    if cards is None or len(cards) == 0:
+        raise ValueError("No cards to download")
+
+    # print(cards)
+
+    print("Downloading images")
+    api_client.download_images(args.api_endpoint, output_folder, cards)
+    print("Done")
 
 
 if __name__ == "__main__":
