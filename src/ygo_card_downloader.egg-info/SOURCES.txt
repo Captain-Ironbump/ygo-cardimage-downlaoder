@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/ygo_card_downloader/__inti__.py
+src/ygo_card_downloader/main.py
+src/ygo_card_downloader/validator.py
+src/ygo_card_downloader.egg-info/PKG-INFO
+src/ygo_card_downloader.egg-info/SOURCES.txt
+src/ygo_card_downloader.egg-info/dependency_links.txt
+src/ygo_card_downloader.egg-info/entry_points.txt
+src/ygo_card_downloader.egg-info/requires.txt
+src/ygo_card_downloader.egg-info/top_level.txt

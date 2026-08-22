@@ -1,0 +1,2 @@
+[console_scripts]
+ygo-card-downloader = ygo_card_downloader.main:main
