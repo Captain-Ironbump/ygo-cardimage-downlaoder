@@ -12,6 +12,7 @@ dependencies = ["pathlib==1.0.1", "requests"]
 
 [project.scripts]
 ygo-card-downloader = "ygo_card_downloader.main:main"
+ygo-card-matcher = "ygo_card_matcher.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

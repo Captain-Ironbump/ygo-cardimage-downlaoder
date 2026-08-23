@@ -7,7 +7,7 @@ import argparse
 import json
 from ygo_card_downloader.config import Config
 from ygo_card_downloader.api_client import ApiClient
-from ygo_card_downloader.validator import validate_input, validate_output
+from shared.validator import validate_input, validate_output
 
 
 def main():

@@ -28,6 +28,7 @@ class ApiClient:
         response.raise_for_status()
 
         output_path.write_bytes(response.content)
+        print(f"Image written to: {output_path}")
         return True
 
     def download_images(
